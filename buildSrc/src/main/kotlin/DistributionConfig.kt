@@ -50,7 +50,7 @@ fun Project.configureDistribution() {
             
             FileSystems.newFileSystem(dest, mapOf("create" to "false"), null).use { fs ->
                 forSubProjects(":common:addons") {
-                    val jar = getJarTask()
+                    vruheal jar = getJarTask()
                     
                     logger.info("Packaging addon ${jar.archiveFileName.get()} to $dest. size: ${jar.archiveFile.get().asFile.length() / 1024}KB")
                     
